@@ -1,0 +1,290 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+    
+        <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+
+        <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
+        <link href="style.css" rel="stylesheet" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="js/customscript.js"></script>
+        
+        <title>DanX Portfolio</title>
+
+        <style>
+            .display_wrapper a{
+                display: block;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+    <!-- **************************** Navigation *************************************  -->
+    <nav id="cpu_screen"> <!-- This is the Navigation Control for the PC-->
+
+        <div class="wrapper">
+            <!-- Clicking on the Logo will lead back to the homepage-->
+            <figure class="logo" > <!-- With this figure tag, it will allow me to control the size of the image -->
+                                  <!-- It will also allow me to control the position of the page.-->
+                <img src="image/Logo_v3.svg" alt="logo" />
+            </figure> <!-- End Figure for my Logo-->
+            
+            
+            <div class="nav_container"> <!-- This div seperates from the logo to the main Navigation -->
+                <a href="index.html">Home</a>
+                <a href="resume.pdf" onclick="window.open(this.href); return false;" onkeypress="window.open(this, href); return false">
+                        Resume</a> <!-- Open a new tag for the resume -->
+                <a href="about.html">About Me</a>
+                <a href="#contact">Contact Me</a>
+            </div> <!-- End div for nav_container -->
+        </div>
+    </nav> <!-- End nav for CPU-->
+
+    <!-- ****************************** Mobile Navigation *******************************************-->
+    <nav id="mobile_screen"> <!-- This is the Navigation Control for the PC-->
+
+        <div class="wrapper">
+            <!-- Clicking on the Logo will lead back to the homepage-->
+            <figure class="logo"> <!-- With this figure tag, it will allow me to control the size of the image -->
+                                  <!-- It will also allow me to control the position of the page.-->
+                <img src="image/Logo_v3.svg" alt="logo" />
+            </figure> <!-- End Figure for my Logo-->
+            
+            <!-- This button only exist on mobile only -->
+            <div id="hamberger_icon" onclick="nav_button()"></div>
+
+                <div class="nav_container">
+                    <a href="index.html">Home</a>
+                    <a href="resume.pdf" onclick="window.open(this.href); return false;" onkeypress="window.open(this, href); return false">
+                        Resume</a> <!-- Open a new tag for the resume -->
+                    <a href="about.html">About Me</a>
+                    <a href="#contact">Contact Me</a>
+                </div><!-- End div for nav container -->
+
+        </div> <!-- End div for Wrapper -->
+    </nav> <!-- End nav for mobile-->
+
+
+    <!-- **************************** Works *************************************  -->
+    <div id="projects">
+
+        <div class="wrapper">
+            <h1 class="space">Creative Work</h1>
+            <!-- Grid Structure -->
+            <main class="grid-container"> <!-- This is the container for all the items on the grid layout -->
+        
+                    <!-- Link for Keniplier -->
+                    <div class="grid-item">
+                        <a href="keniplier.html" >
+                            <div class="text">
+                                <h3 style="left: 40px;">Keniplier no Ken</h3>
+                                <p style="left: 25px;">Animation &bull; Illustration</p>
+                            </div>
+                        <img src="gallery_icon/keniplier.png" alt="keniplier">
+                        <div class="text_mobile">
+                            <h3>Keniplier no Ken</h3>
+                            <p>Animation &bull; Illustration</p>
+                        </div></a>
+                    </div>
+
+                    <!-- Link for wayfinder -->
+                    <div class="grid-item">
+                        <a href="wayfinder.html">
+                        <div class="text">
+                            <h3 style="left: 5px;">App Design: WayFinder</h3>
+                            <p>UI / UX Design</p>
+                        </div>
+                        <img src="gallery_icon/rrh.jpg" alt="wayfinder">
+                        <div class="text_mobile">
+                            <h3>App Design: WayFinder</h3>
+                            <p>UI / UX Design</p>
+                        </div></a>
+                    </div>
+
+                    <!-- Link for MyCourses -->
+                    <div class="grid-item">
+                        <a href="mycourses.html">
+                        <div class="text">
+                            <h3 style="left: 0;">Rework Website: RIT MyCourses</h3>
+                             <p style="top: 150px;">UI / UX Design</p>
+                        </div>
+                        <img src="gallery_icon/mycoursesicon.svg" alt="My Courses">
+                        <div class="text_mobile">
+                            <h3>Rework Website: RIT MyCourses</h3>
+                            <p >UI / UX Design</p>
+                        </div></a>
+                    </div>
+
+                    <!-- Link for Digital Drawing -->
+                    <div class="grid-item">
+                        <a href="digital.html">
+                        <div class="text">
+                            <h3 style="left: 43px;">Digital Drawings</h3>
+                            <p style="top: 150px; left: 80px;">Illustration</p>
+                        </div>
+                    <img src="gallery_icon/digital.png" alt="digitals"></a>
+                    <div class="text_mobile">
+                        <h3>Digital Drawings</h3>
+                        <p>Illustration</p>
+                    </div>
+                    </div>
+    
+                    <!-- Link for Struggle -->
+                    <div class="grid-item">
+                        <a href="struggle.html">
+                        <div class="text">
+                            <h3 style="left: 80px;">Struggle</h3>
+                            <p style="left: 2px;">Motion Graphic &bull; Animation</p>
+                        </div>
+                        <img src="gallery_icon/struggle_icon.svg" alt="struggle" style="background-color: #000000;">
+                        <div class="text_mobile">
+                            <h3>Struggle</h3>
+                            <p>Motion Graphic &bull; Animation</p>
+                        </div></a>
+                    </div>
+    
+                    <!-- Link for Future UI -->
+                    <div  class="grid-item">
+                        <a href="future.html">
+                        <div class="text">
+                            <h3 style="left: 80px;">Future UI</h3>
+                             <p style="left: 25px;">Animation &bull; UI Design</p>
+                        </div>
+                        <img src="gallery_icon/futurelogo.svg" alt="Future UI" style="background-color: #ffffff;">
+                        <div class="text_mobile">
+                            <h3>Struggle</h3>
+                            <p>Animation &bull; UI Design</p>
+                        </div></a>
+                    </div>
+
+                    <!-- Link for Pikmin-->
+                    <div class="grid-item">
+                        <a href="pikmin.html">
+                        <div class="text">
+                            <h3 style="left: 12px;">Pikmin Fan Animation</h3>
+                             <p style="left: 80px;">Animation</p>
+                        </div>
+                        <img src="gallery_icon/pikmin_logo.svg" alt="pikmin" style="background-color: #ffffff"></a>
+                        <div class="text_mobile">
+                            <h3>Pikmin Fan Animation</h3>
+                            <p>Animation</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Link for Pokemon RIT-->
+                    <div class="grid-item">
+                        <a href="pokemon.html">
+                        <div class="text">
+                            <h3 style="left: 30px;">RIT Pokemon Club</h3>
+                             <p style="left: 80px;">Illustration</p>
+                        </div>
+                        <img src="gallery_icon/pokemon.png" alt="pokemon">
+                        <div class="text_mobile">
+                            <h3>RIT Pokemon Club</h3>
+                            <p>Illustration</p>
+                        </div></a>
+                    </div>
+
+                    <!-- Link for Aka Demi -->
+                    <div class="grid-item">
+                        <a href="aka_demi.html">
+                        <div class="text">
+                            <h3 style="left: 75px;">Aka Demi</h3>
+                             <p style="left: 75px;">Illustration</p>
+                        </div>
+                        <img src="gallery_icon/akademi.png" alt="model">
+                        <div class="text_mobile">
+                            <h3>Aka Demi</h3>
+                            <p>Illustration</p>    
+                        </div></a>
+                    </div>
+
+                    <!-- Link for Freelanceing -->
+                    <div class="grid-item">
+                        <a href="otra_oportunidad.html">
+                        <div class="text">
+                            <h3 style="left: 35px;">Otra Oportunidad</h3>
+                             <p style="left: -1px;">Graphic Deisgn &bull; Illustration</p>
+                        </div>
+                        <img src="gallery_icon/otra.png" alt="model">
+                        <div class="text_mobile">
+                            <h3>Otra Oportunidad</h3>
+                            <p>Graphic Deisgn &bull; Illustration</p>    
+                        </div></a>
+                    </div>
+                    <!-- Link for Vocaloid -->
+                    <!-- <div class="grid-item">
+                        <a href="vocaloid.html">
+                        <img src="gallery_icon/yume_yume_icon.png" alt="vocaloid"></a>
+                    </div> -->
+                </main>
+        </div>
+
+    </div> <!-- End div for Works-->
+
+
+    <!-- All of footer icons do not belong to me. These icon belongs to "fontawesome.com"-->
+    <footer>
+        <div class="footer_wrapper">
+            <div id="contact">
+                <h2>Contact Me:</h2>
+                <ul>
+                    <li>Phone: 207-766-6625</li>
+                    <li>Email: MiyukProduction@gmail</li>
+                </ul> 
+                <div class="icon">
+                    <a href="https://www.facebook.com/david.zhao.73" onclick="window.open(this.href); return false;"
+                    onkeypress="window.open(this, href); return false"><img id="facebook" src="fontawesome_logo/facebook-square-brands.svg" alt="facebook" /></a>
+                    
+                    <a href="https://www.linkedin.com/in/david-zhao-designer/" onclick="window.open(this.href); return false;"
+                    onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/linkedin-brands.svg" alt="linkedin"/></a>
+
+                </div> <!-- End div for Icon-->
+            </div>
+    
+            <div class="gallery">
+                <h2>Gallery</h2>
+        
+                <div class="social_gallery">
+                    <a href="https://www.youtube.com/channel/UCTFvc0N-rI3c49-UnhYSPww?" onclick="window.open(this.href); return false;"
+                    onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/youtube-brands.svg" alt="youtube"/></a>
+
+                    <a href="https://www.instagram.com/danxgallery/?hl=en" onclick="window.open(this.href); return false;"
+                    onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/instagram-brands.svg" alt="instagram"/></a>
+                
+                    <a href="https://www.behance.net/danxgallery" onclick="window.open(this.href); return false;"
+                    onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/behance-brands.svg"  alt="behance"/></a>
+                    <!-- These image icons are made by Font Awesome --> 
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    </body>
+    </html>

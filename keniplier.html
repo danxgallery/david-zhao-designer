@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- This code is made by Liep Nguyen
+        Source: https://stackoverflow.com/questions/41611741/uncaught-referenceerror-is-not-defined-at-popup-js1 -->
+    <script src="js/customscript.js"></script>
+
+    <style>
+
+        .grid-structure{
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (max-width: 1024px){
+            #image_ui{
+                background-size: 180%;
+                background-position-x: 50%;
+            }
+        }
+
+        
+        /* size for mobile phones */
+        @media screen and (max-width: 415px){
+            #image_ui{
+                background-size: 250%;
+                background-position-x: 50%;
+            }
+
+            .grid-structure{
+                display: block;
+            }
+
+        }
+    </style>
+    
+    <title>DanX Portfolio - Keniplier no Ken</title>
+</head>
+<body>
+        <div id="top"></div>
+
+        <a href="#top"><img src="fontawesome_logo/arrow-alt-circle-up-solid.svg" id="back-to-top" alt="back-to-top" ></a>
+ <!-- **************************** Navigation *************************************  -->
+ <nav id="cpu_screen"> <!-- This is the Navigation Control for the PC-->
+
+    <div class="wrapper">
+        <!-- Clicking on the Logo will lead back to the homepage-->
+        <figure class="logo"> <!-- With this figure tag, it will allow me to control the size of the image -->
+                              <!-- It will also allow me to control the position of the page.-->
+            <a href="index.html"><img src="image/Logo_v3.svg" alt="logo" /></a>   
+        </figure> <!-- End Figure for my Logo-->
+        
+        
+        <div class="nav_container"> <!-- This div seperates from the logo to the main Navigation -->
+            <a href="index.html">Home</a>
+            <a href="resume.pdf" onclick="window.open(this.href); return false;" onkeypress="window.open(this, href); return false">
+                    Resume</a>
+            <a href="about.html">About Me</a>
+            <a href="#contact">Contact Me</a>
+        </div> <!-- End div for nav_container -->
+    </div>
+</nav> <!-- End nav for CPU-->
+
+<!-- ****************************** Mobile Navigation *******************************************-->
+<nav id="mobile_screen"> <!-- This is the Navigation Control for the PC-->
+
+    <div class="wrapper">
+        <!-- Clicking on the Logo will lead back to the homepage-->
+        <figure class="logo"> <!-- With this figure tag, it will allow me to control the size of the image -->
+                              <!-- It will also allow me to control the position of the page.-->
+            <img src="image/Logo_v3.svg" alt="logo" />
+        </figure> <!-- End Figure for my Logo-->
+        
+        <!-- This button only exist on mobile only -->
+        <div id="hamberger_icon" onclick="nav_button()"></div>
+
+            <div class="nav_container">
+                <a href="index.html">Home</a>
+                <a href="resume.pdf" onclick="window.open(this.href); return false;" onkeypress="window.open(this, href); return false">
+                    Resume</a>
+                <a href="about.html">About Me</a>
+                <a href="#contact">Contact Me</a>
+            </div><!-- End div for nav container -->
+
+    </div> <!-- End div for Wrapper -->
+</nav> <!-- End nav for mobile-->
+
+    <!-- **************************** Main *************************************  -->
+    <div id="image_ui"></div> <!-- Place Image Backgorund Here in CSS -->
+
+    <div class="content" style="padding-top: 0;">
+    <div class="interior_wrapper"> <!-- Wraps the whole content. -->
+
+        <article style="padding-bottom: 0;">
+            <h1>Keniplier no Ken</h1>
+            <p><strong>Animation &bull; Illustration</strong></p>
+
+            <p><strong>May 2019 - October 2019</strong></p>
+        </article>
+
+    </div> <!-- End div for Interior Wrapper -->
+    </div> <!-- End div for content class -->
+
+    
+    <!-- ************************ Image Seperation ******************************  -->
+    <div class="seperation"></div>
+
+    <div class="content"> <!-- Wraps the whole content with white background. -->
+    <div class="interior_wrapper"> <!-- Wraps the whole content. -->
+
+    <h2 class="tabs">Description</h2>
+    <article>
+        <p>This animation is a Fan Animation of Markiplier vs. The Main Character in "Getting Over It with Bennet Foddy.".</p>
+        <p>This animation is also a parody of a Japanese anime named "Hokuto no Ken (Fist of the North Star)."</p>
+
+        <p><strong><a href="https://www.youtube.com/watch?v=IaMsIO7W8_c" onclick="window.open(this.href); return false;"
+            onkeypress="window.open(this, href); return false">Click here to see the video on YouTube.</a></strong></p>
+    </article>    
+
+    <!-- *********************** Animation *************************** -->
+    <h2 class="tabs">Animation</h2>
+
+    <figure>
+        <video controls src="image/animation/keniplier/keniplier_animation.mp4">
+        This video does not support your current version</video>
+        <figcaption>This is the animation</figcaption>
+    </figure>
+    
+    <!-- *********************** Overhead *************************** -->
+    <h2 class="tabs">Illustration</h2>
+
+    <h3 class="space" style="padding-top: 16px;">Overhead</h3>
+    <figure>
+        <img src="image/animation/keniplier/top-angle.png" alt="overhead">
+    </figure>
+
+    <!-- *********************** Keniplier *************************** -->
+    <section>
+        <h3 class="space">Keniiplier</h3>
+        <p>He is a fusion of a YouTuber name Markiplier and Kenshiro, the main character of "Hokuto no Ken".</p>
+    </section>
+
+    <figure>
+        <img src="image/animation/keniplier/mark.png" alt="keniplier">
+        <figcaption>First Hit</figcaption>
+        <img src="image/animation/keniplier/mark2.png" alt="keniplier">
+        <figcaption>Final Punch</figcaption>
+    </figure>
+
+    <!-- *********************** Foddy *************************** -->
+    <section>
+        <h3 class="space">Foddy</h3>
+        <p>He is the main character in the game "Getting Over It with Bennet Foddy."</p> 
+    </section>
+
+    <figure>
+        <img src="image/animation/keniplier/foddy.png" alt="foddy">
+    </figure>
+
+    <!-- *********************** Natsume Moe *************************** -->
+    <section>
+        <h3 class="space">Natsume Moe</h3>
+        <p>Moe is a Virtual YouTuber. She is just there to watch.</p> 
+    </section>
+    
+    <figure>
+        <img src="image/animation/keniplier/moe.png" alt="moe">
+    </figure>
+
+    <!-- *********************** Kizuna Ai *************************** -->
+    <section>
+        <h3 class="space">Kizuna Ai</h3>
+        <p>Moe is a Virtual YouTuber. She is just there to watch.</p> 
+    </section>
+    
+    <figure>
+        <img src="image/animation/keniplier/ai.png" alt="ai">
+    </figure>
+                
+    </div> 
+</div>
+
+<!-- All of footer icons do not belong to me. These icon belongs to "fontawesome.com"-->
+<footer>
+    <div class="footer_wrapper">
+        <div id="contact">
+            <h2>Contact Me:</h2>
+            <ul>
+                <li>Phone: 207-766-6625</li>
+                <li>Email: MiyukProduction@gmail</li>
+            </ul> 
+            <div class="icon">
+                <a href="https://www.facebook.com/david.zhao.73" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img id="facebook" src="fontawesome_logo/facebook-square-brands.svg" alt="facebook" /></a>
+                
+                <a href="https://www.linkedin.com/in/david-zhao-designer/" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/linkedin-brands.svg" alt="linkedin"/></a>
+            </div> <!-- End div for Icon-->
+        </div>
+
+        <div class="gallery">
+            <h2>Gallery</h2>
+    
+            <div class="social_gallery">
+                <a href="https://www.youtube.com/channel/UCTFvc0N-rI3c49-UnhYSPww?" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/youtube-brands.svg" alt="youtube"/></a>
+
+                <a href="https://www.instagram.com/danxgallery/?hl=en" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/instagram-brands.svg" alt="instagram"/></a>
+            
+                <a href="https://www.behance.net/danxgallery" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/behance-brands.svg"  alt="behance"/></a>
+            
+                <a href="https://www.deviantart.com/danxgallery" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/deviantart-brands.svg"  alt="deviantart"/></a>
+                <!-- These image icons are made by Font Awesome --> 
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- This code is made by Liep Nguyen
+        Source: https://stackoverflow.com/questions/41611741/uncaught-referenceerror-is-not-defined-at-popup-js1 -->
+    <script src="js/customscript.js"></script>
+
+    <style>
+
+        .grid-structure{
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (max-width: 1024px){
+            #image_ui{
+                background-size: 180%;
+                background-position-x: 50%;
+            }
+        }
+
+        
+        /* size for mobile phones */
+        @media screen and (max-width: 415px){
+            #image_ui{
+                background-size: 250%;
+                background-position-x: 50%;
+            }
+
+            .grid-structure{
+                display: block;
+            }
+
+        }
+    </style>
+    
+    <title>DanX Portfolio - RIT Pokemon Club</title>
+</head>
+<body>
+        <div id="top"></div>
+
+        <a href="#top"><img src="fontawesome_logo/arrow-alt-circle-up-solid.svg" id="back-to-top" alt="back-to-top" ></a>
+ <!-- **************************** Navigation *************************************  -->
+ <nav id="cpu_screen"> <!-- This is the Navigation Control for the PC-->
+
+    <div class="wrapper">
+        <!-- Clicking on the Logo will lead back to the homepage-->
+        <figure class="logo"> <!-- With this figure tag, it will allow me to control the size of the image -->
+                              <!-- It will also allow me to control the position of the page.-->
+            <a href="index.html"><img src="image/Logo_v3.svg" alt="logo" /></a>   
+        </figure> <!-- End Figure for my Logo-->
+        
+        
+        <div class="nav_container"> <!-- This div seperates from the logo to the main Navigation -->
+            <a href="index.html">Home</a>
+            <a href="resume.pdf" onclick="window.open(this.href); return false;" onkeypress="window.open(this, href); return false">
+                    Resume</a>
+            <a href="about.html">About Me</a>
+            <a href="#contact">Contact Me</a>
+        </div> <!-- End div for nav_container -->
+    </div>
+</nav> <!-- End nav for CPU-->
+
+<!-- ****************************** Mobile Navigation *******************************************-->
+<nav id="mobile_screen"> <!-- This is the Navigation Control for the PC-->
+
+    <div class="wrapper">
+        <!-- Clicking on the Logo will lead back to the homepage-->
+        <figure class="logo"> <!-- With this figure tag, it will allow me to control the size of the image -->
+                              <!-- It will also allow me to control the position of the page.-->
+            <img src="image/Logo_v3.svg" alt="logo" />
+        </figure> <!-- End Figure for my Logo-->
+        
+        <!-- This button only exist on mobile only -->
+        <div id="hamberger_icon" onclick="nav_button()"></div>
+
+            <div class="nav_container">
+                <a href="index.html">Home</a>
+                <a href="resume.pdf" onclick="window.open(this.href); return false;" onkeypress="window.open(this, href); return false">
+                    Resume</a>
+                <a href="about.html">About Me</a>
+                <a href="#contact">Contact Me</a>
+            </div><!-- End div for nav container -->
+
+    </div> <!-- End div for Wrapper -->
+</nav> <!-- End nav for mobile-->
+
+    <!-- **************************** Main *************************************  -->
+    <div id="image_ui"></div> <!-- Place Image Backgorund Here in CSS -->
+
+    <div class="content" style="padding-top: 0;">
+    <div class="interior_wrapper"> <!-- Wraps the whole content. -->
+
+        <article style="padding-bottom: 0;">
+            <h1>RIT Pokemon Club</h1>
+            <p><strong>Illustration</strong></p>
+
+            <p><strong>August 2017 - August 2019</strong></p>
+        </article>
+
+    </div> <!-- End div for Interior Wrapper -->
+    </div> <!-- End div for content class -->
+
+    
+    <!-- ************************ Image Seperation ******************************  -->
+    <div class="seperation"></div>
+
+    <div class="content"> <!-- Wraps the whole content with white background. -->
+    <div class="interior_wrapper"> <!-- Wraps the whole content. -->
+
+    <h2 class="tabs">Description</h2>
+    <article>
+        <p>Pokemon is owned by Nintendo. It's an RPG style game where players take turns
+             to knock each other's Pokemon. The first person to lose all of their Pokemon Characters loses
+             the game. </p>
+
+        <p>Rochester Insitute of Technology (RIT) has a Pokemon Club. I make posters for events.</p>
+    </article>
+
+    <h2 class="tabs">Illustration</h2>
+    <!-- *********************** Alola Tournament *************************** -->
+    <section>
+        <h3 class="space">Not Fully Evolve Pokemon Tournament 2019</h3>
+        <p>The most recent poster made. They range from first stage Pokemon to second stage Pokemon.</p>
+
+        <p><strong><a href="https://www.youtube.com/watch?v=KeDKvFK6sMo" onclick="window.open(this.href); return false;"
+        onkeypress="window.open(this, href); return false">Click here to see the start of the process.</a></strong></p>
+
+    </section>
+
+    <figure>
+        <img src="image/illustation/rit_pokemon/not-fully-evolved-poster.png" alt="NFE Poster">
+        <figcaption>Finished in <em>October 24, 2019</em></figcaption>
+    </figure>
+
+    <!-- *********************** Alola Tournament *************************** -->
+    <section>
+        <h3 class="space">Alola Tournament 2019</h3>
+        <p>Here is the fan art of the Guardian Deities.
+            They are:
+        </p> 
+        <ul>
+            <li>Tapu Koko (Top Left)</li>
+            <li>Tapu Lele (Bottom Left)</li>
+            <li>Tapu Bulu (Top Right)</li>
+            <li>Tapu Fini (Bottom Right)</li>
+        </ul>
+    </section>
+
+    <figure>
+        <img src="image/illustation/rit_pokemon/alola_poster.png" alt="Alola Poster">
+    </figure>
+
+    <!-- *********************** Gym 2019 *************************** -->
+    <section>
+        <h3 class="space">Gym Tournament 2019</h3>
+        <p>It shows some of the previous gym leaders who were in the club.
+        </p> 
+    </section>
+    
+    <figure>
+        <img src="image/illustation/rit_pokemon/gym2019.png" alt="gym Tournament 2019">
+    </figure>
+
+    <!-- *********************** Christmas *************************** -->
+    <section>
+        <h3 class="space">Christmas Tournament 2018</h3>
+        <p>Poster made for the Rochester Insitute of Technology (RIT) Christmas Tournament.</p> 
+    </section>
+    
+    <figure>
+        <img src="image/illustation/rit_pokemon/christmas_pokemon.png" alt="Pokemon Christmas">
+    </figure>
+                
+    <!-- *********************** VGC Tournament *************************** -->
+    <section>
+        <h3 class="space">VGC Tournament 2018</h3> 
+    </section>
+
+    <figure>
+        <img src="image/illustation/rit_pokemon/sunvsmoon.png" alt="sun vs moon">
+    </figure>
+
+    <!-- *********************** Gym Battle 2018 - 2019 *************************** -->
+    <section>
+        <h3 class="space">RIT Gym Trial 2018 - 2019</h3>
+        <p>Rochester Insitute of Technology (RIT) Pokemon Club Gym Trial Poster 2018 - 2019.</p> 
+    </section>
+    
+    <figure>
+        <img src="image/illustation/rit_pokemon/gym_battle.png" alt="RIT Gym 2018 - 2019">
+    </figure>
+
+    <!-- *********************** Final Battle *************************** -->
+    <section>
+        <h3 class="space">End of the Year Battle 2017 - 2018</h3>
+        <p>RIT Pokemon Club Aannual end of the year battle.</p> 
+    </section>
+    
+    <figure>
+        <img src="image/illustation/rit_pokemon/final_battle.png" alt="End of the Year 2017 - 2018">
+    </figure>
+
+    <!-- *********************** Whimsicott *************************** -->
+    <section>
+        <h3 class="space">RU Tournament 2018</h3>
+        <p>Whimsicott for the Win.</p> 
+    </section>
+    
+    <figure>
+        <img src="image/illustation/rit_pokemon/whimsicott.png" alt="whimsicott">
+    </figure>
+
+    <!-- *********************** Pluse and Minum *************************** -->
+    <section>
+        <h3 class="space">Multi-Battle Tournament 2018</h3>
+        <p>Pluse and Minum. Fiiiiiu! Sion! HAAA!</p> 
+    </section>
+    <figure>
+        <img src="image/illustation/rit_pokemon/pluse_and_minum.png" alt="pluse_and_minum">
+    </figure>
+
+    <!-- *********************** QR Code Tournament *************************** -->
+    <section>
+        <h3 class="space">RIT QR Code Tournament 2018</h3>
+        <p>Two posters versions.</p>
+        
+    </section>
+    <div class="grid-structure">
+        <figure>
+            <img src="image/illustation/rit_pokemon/qr_code_battle_poster_V1.png" alt="QR 1">
+        </figure>
+        
+        <figure>
+            <img src="image/illustation/rit_pokemon/qr_code_battle_poster_V2.png" alt="QR 2">
+        </figure>
+    </div>
+                
+    <!-- *********************** Mimikyu *************************** -->
+    <section>
+        <h3 class="space">Halloween Tournament 2017</h3>
+        <p>Mimikyu used Wil-o-Wisp.</p>
+    </section>
+
+    <figure>
+        <img src="image/illustation/rit_pokemon/mimikyu.png" alt="Mimikyu">
+    </figure>
+
+    <!-- *********************** Gym Trial 2017 - 2018 *************************** -->
+    <section>
+        <h3 class="space">RIT Gym Trial 2017-2018</h3>
+        <p>RIT Pokemon Club Gym Trial.</p> 
+    </section>
+    <figure>
+        <img src="image/illustation/rit_pokemon/darkvsfire.png" alt="gym trial 2017 - 2018">
+    </figure>
+
+    </div> 
+</div>
+
+<!-- All of footer icons do not belong to me. These icon belongs to "fontawesome.com"-->
+<footer>
+    <div class="footer_wrapper">
+        <div id="contact">
+            <h2>Contact Me:</h2>
+            <ul>
+                <li>Phone: 207-766-6625</li>
+                <li>Email: MiyukProduction@gmail</li>
+            </ul> 
+            <div class="icon">
+                <a href="https://www.facebook.com/david.zhao.73" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img id="facebook" src="fontawesome_logo/facebook-square-brands.svg" alt="facebook" /></a>
+                
+                <a href="https://www.linkedin.com/in/david-zhao-designer/" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/linkedin-brands.svg" alt="linkedin"/></a>
+            </div> <!-- End div for Icon-->
+        </div>
+
+        <div class="gallery">
+            <h2>Gallery</h2>
+    
+            <div class="social_gallery">
+                <a href="https://www.youtube.com/channel/UCTFvc0N-rI3c49-UnhYSPww?" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/youtube-brands.svg" alt="youtube"/></a>
+
+                <a href="https://www.instagram.com/danxgallery/?hl=en" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/instagram-brands.svg" alt="instagram"/></a>
+            
+                <a href="https://www.behance.net/danxgallery" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/behance-brands.svg"  alt="behance"/></a>
+            
+                <a href="https://www.deviantart.com/danxgallery" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/deviantart-brands.svg"  alt="deviantart"/></a>
+                <!-- These image icons are made by Font Awesome --> 
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>

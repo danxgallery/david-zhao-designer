@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- This code is made by Liep Nguyen
+        Source: https://stackoverflow.com/questions/41611741/uncaught-referenceerror-is-not-defined-at-popup-js1 -->
+    <script src="js/customscript.js"></script>
+
+    <style>
+
+
+        figure img{
+            border: 5px solid #424452; /*Dark Grey Blue*/
+        }
+        
+
+        .logo img{
+            border: none;
+        }
+
+        .toggle_button a{
+            text-indent: 30px;
+        }
+
+        .section a{
+            text-indent: 60px;
+        }
+    </style>
+    
+    <title>DanX Portfolio - RRH Wayfinder</title>
+</head>
+<body>
+        <div id="top"></div>
+        <div id="side_sub">
+
+                <div class="list"> 
+                        <a href="#summery">Summery</a>
+                        <a href="#final">Prototype</a>
+                        <a href="#goal">Goal</a></h3>   
+                        <a href="#wireframe">Wireframes</a>
+                        <a href="#main_comp">Main Composition</a>  
+
+
+                </div>
+        </div>
+
+<a href="#top"><img src="fontawesome_logo/arrow-alt-circle-up-solid.svg" id="back-to-top" alt="back-to-top" ></a>
+            
+<!-- **************************** CPU Navigation *************************************  -->
+ <!-- **************************** Navigation *************************************  -->
+ <nav id="cpu_screen"> <!-- This is the Navigation Control for the PC-->
+
+    <div class="wrapper">
+        <!-- Clicking on the Logo will lead back to the homepage-->
+        <figure class="logo"> <!-- With this figure tag, it will allow me to control the size of the image -->
+                              <!-- It will also allow me to control the position of the page.-->
+            <img src="image/Logo_v3.svg" alt="logo" />   
+        </figure> <!-- End Figure for my Logo-->
+        
+        
+        <div class="nav_container"> <!-- This div seperates from the logo to the main Navigation -->
+            <a href="index.html">Home</a>
+            <a href="resume.pdf" onclick="window.open(this.href); return false;" onkeypress="window.open(this, href); return false">
+                    Resume</a>
+            <a href="about.html">About Me</a>
+            <a href="#contact">Contact Me</a>
+        </div> <!-- End div for nav_container -->
+    </div>
+</nav> <!-- End nav for CPU-->
+
+<!-- ****************************** Mobile Navigation *******************************************-->
+<nav id="mobile_screen"> <!-- This is the Navigation Control for the PC-->
+
+    <div class="wrapper">
+        <!-- Clicking on the Logo will lead back to the homepage-->
+        <figure class="logo"> <!-- With this figure tag, it will allow me to control the size of the image -->
+                              <!-- It will also allow me to control the position of the page.-->
+            <img src="image/Logo_v3.svg" alt="logo" />  
+        </figure> <!-- End Figure for my Logo-->
+        
+        <!-- This button only exist on mobile only -->
+        <div id="hamberger_icon" onclick="nav_button()"></div>
+
+            <div class="nav_container">
+                <a href="index.html">Home</a>
+                <a href="resume.pdf" onclick="window.open(this.href); return false;" onkeypress="window.open(this, href); return false">
+                    Resume</a>
+                <a href="about.html">About Me</a>
+                <a href="#contact">Contact Me</a>
+            </div><!-- End div for nav container -->
+
+    </div> <!-- End div for Wrapper -->
+</nav> <!-- End nav for mobile-->
+
+
+</div>
+<div id="image_ui"></div> <!-- Place Image Backgorund Here in CSS -->
+
+<div class="content">
+<div class="interior_wrapper">
+    <article>
+        <h1>App Design - Wayfinder</h1>
+        <p><strong>UI / UX Design</strong></p>
+        
+        <p><strong>August 2018 - November 2018</strong></p>
+    </article>
+</div>
+</div>
+
+        
+<div class="content">
+<div class="interior_wrapper">
+        <h2 id="summery" class="tabs">Summary</h2>
+        <article>
+            <p>The Wayfinder project was a school project in RIT. We were broken into different cooperating teams.
+                The client was Rochester Regional Health (RRH).</p>
+
+            <p>They wanted us to create an Augmented Reality that can help both Patients and Coworkers navigate the Hospital in 
+                a simple way. I was in a team that dealt with language barriers.</p>
+        </article>
+
+        <!-- *********************** Main Composition *************************** -->
+        <h2 id="final" class="tabs">Prototype</h2>
+
+        <!-- *********************** Onboard *************************** -->
+         
+        <figure>
+            <video controls src="image/ui/wayfinder/presentation.mp4" type="video/mp4">
+                    This video does not support your program.
+            </video>
+        </figure>
+
+        <!-- *********************** Goal *************************** -->
+        <h2 id="goal" class="tabs" >Goal</h2>
+        <section>
+            <div class="grid-structure">
+                <article>
+                <h3 class="space">Control Efficiency of the Hospital</h3>
+                <p>People can get lost very easily. Especially when an emergency is going on.
+                    This can cause a traffic jam for the patients and doctors to show up in the right room on time.</p>
+                </article>
+        
+                <article>
+                <h3 class="space">Improve Localization</h3>
+                <p>Some people do not understand English very well or do not understand it at all. We would like 
+                    to added this feature to break the language barrier between locals and doctors, and doctors to doctors.
+                </p>
+                </article>
+
+                <article>
+                <h3 class="space">Improve Emotion Experience</h3>
+                <p>Hospital is a controlled environment. But things can be very stressful quickly. 
+                   The app is develop to reduce stress and make people calmer.</p>
+                </article>
+            </div>
+        </section>
+        
+        <!-- *********************** Wireframes *************************** -->
+        <h2 id="wireframe" class="tabs">Wireframes</h2>
+
+        <!-- *********************** Version 3 *************************** -->
+
+        <div class="grid-structure">
+            <figure>
+                <img src="image/ui/wayfinder/wireframes/v3/eng_0.png" alt="user flow" class="noborders" >
+                <figcaption>Starting Navigation</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="image/ui/wayfinder/wireframes/v3/eng_3.png" alt="user flow" class="noborders">
+                <figcaption>Walking</figcaption>
+            </figure>
+    
+            <figure>
+                <img src="image/ui/wayfinder/wireframes/v3/eng_4.png" alt="user flow" class="noborders">
+                <figcaption>Arrow</figcaption>
+            </figure>
+    
+            <figure>
+                <img src="image/ui/wayfinder/wireframes/v3/eng_5.png" alt="user flow" class="noborders">
+                <figcaption>Wrong Way</figcaption>
+            </figure>
+    
+            <figure>
+                <img src="image/ui/wayfinder/wireframes/v3/eng_6.png" alt="user flow" class="noborders">
+                <figcaption>Almost There</figcaption>
+            </figure>
+    
+            <figure>
+                <img src="image/ui/wayfinder/wireframes/v3/eng_7.png" alt="user flow" class="noborders">
+                <figcaption>Finished</figcaption>
+            </figure>
+        </div>
+            
+
+        <!-- *********************** Main Composition *************************** -->
+        <h2 id="main_comp" class="tabs">Main Composition</h2>
+ 
+        <!-- *********************** Homepage *************************** -->
+
+        <div class="grid-structure">
+            <figure>
+                <img src="image/ui/wayfinder/main_comp/1.png" alt="user flow" class="noborders">
+                <figcaption>Login Screen</figcaption>
+            </figure>
+    
+            <figure>
+                <img src="image/ui/wayfinder/main_comp/2.png" alt="user flow" class="noborders">
+                <figcaption>Login Screen Typed</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="image/ui/wayfinder/main_comp/3.png" alt="user flow" class="noborders">
+                <figcaption>Language Screen</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="image/ui/wayfinder/main_comp/5.png" alt="user flow" class="noborders">
+                <figcaption>Login Screen Typed (Japanese)</figcaption>
+            </figure>
+    
+            <figure>
+                <img src="image/ui/wayfinder/main_comp/6.png" alt="user flow" class="noborders">
+                <figcaption>Confirm Screen</figcaption>
+            </figure>
+    
+            <figure>
+                <img src="image/ui/wayfinder/main_comp/7.png" alt="user flow" class="noborders">
+                <figcaption>Loading Screen</figcaption>
+            </figure>
+    
+            <figure>
+                <img src="image/ui/wayfinder/main_comp/9.png" alt="user flow" class="noborders">
+                <figcaption>Start Navigation</figcaption>
+            </figure>
+    
+            <figure>
+                <img src="image/ui/wayfinder/main_comp/11.png" alt="user flow" class="noborders">
+                <figcaption>Almost There</figcaption>
+            </figure>
+    
+            <figure>
+                <img src="image/ui/wayfinder/main_comp/12.png" alt="user flow" class="noborders">
+                <figcaption>Congratulation</figcaption>
+            </figure>
+        
+        </div>
+    </div>
+</div>
+
+<!-- All of footer icons do not belong to me. These icon belongs to "fontawesome.com"-->
+<footer>
+    <div class="footer_wrapper">
+        <div id="contact">
+            <h2>Contact Me:</h2>
+            <ul>
+                <li>Phone: 207-766-6625</li>
+                <li>Email: MiyukProduction@gmail</li>
+            </ul> 
+            <div class="icon">
+                <a href="https://www.facebook.com/david.zhao.73" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img id="facebook" src="fontawesome_logo/facebook-square-brands.svg" alt="facebook" /></a>
+                
+                <a href="linkedin.com/in/david-zhao-designer" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/linkedin-brands.svg" alt="linkedin"/></a>
+
+            </div> <!-- End div for Icon-->
+        </div>
+
+        <div class="gallery">
+            <h2>Gallery</h2>
+    
+            <div class="social_gallery">
+                <a href="https://www.youtube.com/channel/UCTFvc0N-rI3c49-UnhYSPww?" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/youtube-brands.svg" alt="youtube"/></a>
+
+                <a href="https://www.instagram.com/danxgallery/?hl=en" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/instagram-brands.svg" alt="instagram"/></a>
+            
+                <a href="hhttps://www.behance.net/danxgallery" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/behance-brands.svg"  alt="behance"/></a>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+
+
+</body>
+</html>

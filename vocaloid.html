@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- This code is made by Liep Nguyen
+        Source: https://stackoverflow.com/questions/41611741/uncaught-referenceerror-is-not-defined-at-popup-js1 -->
+    <script src="js/customscript.js"></script>
+
+    <style>
+
+
+        @media screen and (max-width: 1024px){
+            #image_ui{
+                background-size: 180%;
+                background-position-x: 50%;
+            }
+        }
+
+        /* size for mobile phones */
+        @media screen and (max-width: 415px){
+            #image_ui{
+                background-size: 250%;
+                background-position-x: 50%;
+            }
+
+            .grid-structure{
+                display: block;
+            }
+
+        }
+    </style>
+    
+    <title>DanX Portfolio - Vocaloid Fan Art</title>
+</head>
+<body>
+    <div id="top"></div>
+    <a href="#top"><img src="fontawesome_logo/arrow-alt-circle-up-solid.svg" id="back-to-top" alt="back-to-top" ></a>
+
+    <!-- **************************** Navigation *************************************  -->
+    <nav id="cpu_screen"> <!-- This is the Navigation Control for the PC-->
+
+        <div class="wrapper">
+            <!-- Clicking on the Logo will lead back to the homepage-->
+            <figure class="logo"> <!-- With this figure tag, it will allow me to control the size of the image -->
+                                  <!-- It will also allow me to control the position of the page.-->
+                <a href="index.html"><img src="image/Logo_v3.svg" alt="logo" /></a>   
+            </figure> <!-- End Figure for my Logo-->
+            
+            
+            <div class="nav_container"> <!-- This div seperates from the logo to the main Navigation -->
+                <a href="index.html">Home</a>
+                <a href="resume.pdf" onclick="window.open(this.href); return false;" onkeypress="window.open(this, href); return false">
+                        Resume</a>
+                <a href="about.html">About Me</a>
+                <a href="#contact">Contact Me</a>
+            </div> <!-- End div for nav_container -->
+        </div>
+    </nav> <!-- End nav for CPU-->
+
+    <!-- ****************************** Mobile Navigation *******************************************-->
+    <nav id="mobile_screen"> <!-- This is the Navigation Control for the PC-->
+
+        <div class="wrapper">
+            <!-- Clicking on the Logo will lead back to the homepage-->
+            <figure class="logo"> <!-- With this figure tag, it will allow me to control the size of the image -->
+                                  <!-- It will also allow me to control the position of the page.-->
+                <a href="index.html"><img src="image/Logo_v3.svg" alt="logo" /></a>   
+            </figure> <!-- End Figure for my Logo-->
+            
+            <!-- This button only exist on mobile only -->
+            <div id="hamberger_icon" onclick="nav_button()"></div>
+
+                <div class="nav_container">
+                    <a href="index.html">Home</a>
+                    <a href="resume.pdf" onclick="window.open(this.href); return false;" onkeypress="window.open(this, href); return false">
+                        Resume</a>
+                    <a href="about.html">About Me</a>
+                    <a href="#contact">Contact Me</a>
+                </div><!-- End div for nav container -->
+
+        </div> <!-- End div for Wrapper -->
+    </nav> <!-- End nav for mobile-->
+
+    <div class="content"> <!-- Wraps the whole content with white background. -->
+    <div class="interior_wrapper"> <!-- Wraps the whole content. -->
+
+        <article style="padding-bottom: 0;">
+            <h1>Vocaloid Fan Art</h1>
+            <p><strong>Illustration</strong></p>
+        </article>
+
+    </div> <!-- End div for Interior Wrapper -->
+    </div> <!-- End div for content class -->
+
+    <div id="image_ui"></div> <!-- Place Image Backgorund Here in CSS -->
+    <!-- ************************ Image Seperation ******************************  -->
+    <div class="seperation"></div>
+
+    <div class="content"> <!-- Wraps the whole content with white background. -->
+    <div class="interior_wrapper"> <!-- Wraps the whole content. -->
+    <!-- *********************** Description *************************** -->
+    <article>
+        <h1 id="description">Description</h1>
+    
+        <p>These are all the fan art I made. All the original characters belong to the rightful owner.</p>
+        <p>Vocaloid is a virtual android that sings in your electronics. They are in this anime-like style. 
+            The songs are created by other producers and animation and drawings are made by other animators and illustrators. 
+            They were made by "Yamaha". But these Vocaloids I drew originated by "Crypton Future Tech".</p>
+        <p>Such as Hatsune Miku, and Kagamine Rin and Len. are examples of "Crypton Future Tech" Vocaloids.</p>
+    </article>
+
+        <!-- *********************** Sand Plant *************************** -->
+        <section>
+            <h3 class="space">Lucky☆Orb Miku</h3>
+            <p>This costume originated in emon(Tes.) in his song Lucky☆Orb.</p>
+        </section>
+        
+        <figure>
+            <img src="image/illustation/vocaloid/lucky_orb.png" alt="sand_planet">
+            <figcaption>Made in <em>June 1, 2019</em></figcaption>
+        </figure>
+
+        <!-- *********************** Sakura no Ame *************************** -->
+        <section>
+            <h3 class="space">Sakura no Ame</h3>
+            <p>This is my interpitation of Sakura no Ame (Sakura Rain).</p>
+            <p>This song is made by Halyosy.</p>
+        </section>
+        
+        <figure>
+            <img src="image/illustation/vocaloid/sakura_no_ame.png" alt="sand_planet">
+            <figcaption>Made in <em>March 2019</em></figcaption>
+        </figure>
+
+        <!-- *********************** Sand Plant *************************** -->
+        <section>
+            <h3 class="space">Sand Planet</h3>
+            <p>Sand Planet is made by Hachi.</p>
+        </section>
+        
+        <figure>
+            <img src="image/illustation/vocaloid/sand_planet.png" alt="sand_planet">
+            <figcaption>Made in <em>January 2018</em></figcaption>
+        </figure>
+
+        <!-- *********************** Chinese New Year *************************** -->
+        <section>
+            <h3 class="space">Happy Chinese New Year</h3>
+            <p>Happy Chinese New Year. Fan art of "1 2 Fan Club"
+            and "Chinese New Year Miku and Len".</p> 
+        </section>
+        
+        <figure>
+            <img src="image/illustation/vocaloid/chinese_new_year.png" alt="Chinese New Year">
+            <figcaption>Made in <em>February 16, 2018</em></figcaption>
+        </figure>
+
+        <!-- *********************** ARiA *************************** -->
+        <section>
+            <h3 class="space">ARiA</h3>
+            <p>ARiA Miku. The Song ARiA is made by TokuP.</p> 
+        </section>
+        
+        <figure>
+            <img src="image/illustation/vocaloid/ARiA.png" alt="ARiA">
+            <figcaption>Made in <em>March 2018</em></figcaption>
+        </figure>
+
+        <!-- *********************** Snow Miku 2016 *************************** -->
+        <section>
+            <h3 class="space">Snow Miku 2016</h3>
+            <p>Snow Miku 2016.</p>
+            <p>The original designer of Snow Miku 2016 is Otogi Kotatu.</p>
+            <p>The song is made by Doriko.</p>
+        </section>
+        
+        <figure>
+            <img src="image/illustation/vocaloid/snowmiku.jpg" alt="snow miku 2016">
+            <figcaption>Made in <em>January 2017</em></figcaption>
+        </figure>
+
+
+        <!-- *********************** Miku *************************** -->
+        <section>
+            <h3 class="space">Miku and I</h3>
+            <p>Miku in another world.</p> 
+        </section>
+        
+        <figure>
+            <img src="image/illustation/vocaloid/mikuandi.jpg" alt="Miku and I">
+            <figcaption>Made in <em>April 25 2015</em></figcaption>
+        </figure>
+  
+        <!-- *********************** Clover Club Miku *************************** -->
+        <section>
+            <h3 class="space">Clover Club</h3>
+            <p>Let it Clover Club. The Beautiful Love.</p> 
+            <p>This song is made by YuuyuP.</p>
+        </section>
+        
+        <figure>
+            <img src="image/illustation/vocaloid/clover_club_miku_v2.png" alt="Clover Club">
+            <figcaption>Made in <em>2017</em></figcaption>
+        </figure>
+
+        <!-- *********************** Yume Yume Miku *************************** -->
+        <section>
+            <h3 class="space">Yume Yume</h3>
+            <p>Yume Yume Miku.</p>
+            <p>The song Yume Yume is made by DECO*27.</p>
+        </section>
+        
+        <figure>
+            <img src="image/illustation/vocaloid/yume_yume_fan.png" alt="Yume Yume">
+            <figcaption>Made in <em>December 24, 2016</em></figcaption>
+        </figure>
+
+        <!-- *********************** Miracle Paint *************************** -->
+        <section>
+            <h3 class="space">Miracle Paint</h3>
+            <p>Miracle Paint is my favorite Miku Song of all time.</p>
+            <p>The song Miracle Paint is made by fuwacina(Oster Project).</p>
+            <p>Made in <em>September 2015</em></p>
+        </section>
+
+        <figure>
+            <img src="image/illustation/vocaloid/miraclepaint.jpg" alt="Miracle Paint">
+        </figure>
+
+        <!-- *********************** SPiCA Miku *************************** -->
+        <section>
+            <h3 class="space">SPiCa</h3>
+            <p>Fan at of SPiCa Miku.</p>
+            <p>The song SPiCA is made by TokuP.</p>
+            
+        </section>
+        <figure>
+            <img src="image/illustation/vocaloid/spica.jpg" alt="SPiCa">
+            <figcaption>Made in <em>August 29, 2015</em></figcaption>
+        </figure>
+
+
+
+        </div> 
+    </div>
+
+<!-- All of footer icons do not belong to me. These icon belongs to "fontawesome.com"-->
+<footer>
+    <div class="footer_wrapper">
+        <div id="contact">
+            <h2>Contact Me:</h2>
+            <ul>
+                <li>Phone: 207-766-6625</li>
+                <li>Email: MiyukProduction@gmail</li>
+            </ul> 
+            <div class="icon">
+                <a href="https://www.facebook.com/david.zhao.73" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img id="facebook" src="fontawesome_logo/facebook-square-brands.svg" alt="facebook" /></a>
+                
+                <a href="https://www.linkedin.com/in/david-zhao-designer/" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/linkedin-brands.svg" alt="linkedin"/></a>
+            </div> <!-- End div for Icon-->
+        </div>
+
+        <div class="gallery">
+            <h2>Gallery</h2>
+    
+            <div class="social_gallery">
+                <a href="https://www.youtube.com/channel/UCTFvc0N-rI3c49-UnhYSPww?" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/youtube-brands.svg" alt="youtube"/></a>
+
+                <a href="https://www.instagram.com/danxgallery/?hl=en" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/instagram-brands.svg" alt="instagram"/></a>
+            
+                <a href="https://www.behance.net/danxgallery" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/behance-brands.svg"  alt="behance"/></a>
+                <!-- These image icons are made by Font Awesome --> 
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

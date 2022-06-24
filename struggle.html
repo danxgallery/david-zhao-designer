@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- This code is made by Liep Nguyen
+        Source: https://stackoverflow.com/questions/41611741/uncaught-referenceerror-is-not-defined-at-popup-js1 -->
+    <script src="js/customscript.js"></script>
+    
+    <title>DanX Portfolio - Struggle</title>
+    
+    <style>
+
+        .grid-structure{
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (max-width: 1024px){
+            #image_ui{
+                background-image: url(gallery_icon/struggle_icon.svg);
+            }
+
+        }
+
+        /* size for mobile phones */
+        @media screen and (max-width: 415px){
+
+            .grid-structure{
+                display: block;
+            }
+
+        }
+    </style>
+
+</head>
+<body>
+        <div id="top">
+                <!-- This div is purposly Empty-->
+        </div> <!-- This div only applies with the div, back to top. -->
+
+        <div id="side_sub">
+                <div class="list"> 
+                    <a href="#description">Description</a>
+                    <a href="#animation">Animation</a>
+                    <a href="#storyboard">Storyboard</a>
+                    <a href="#characters">Characters</a>
+                    <a href="#background">Background</a>
+                </div> <!-- End div for List-->
+        </div> <!-- End did for side sub -->
+
+        <!-- This is the back to top button -->
+        <a href="#top"><img src="fontawesome_logo/arrow-alt-circle-up-solid.svg" id="back-to-top" alt="back-to-top" ></a>
+
+    <!-- **************************** Navigation *************************************  -->
+    <nav id="cpu_screen"> <!-- This is the Navigation Control for the PC-->
+
+        <div class="wrapper">
+            <!-- Clicking on the Logo will lead back to the homepage-->
+            <figure class="logo"> <!-- With this figure tag, it will allow me to control the size of the image -->
+                                  <!-- It will also allow me to control the position of the page.-->
+                <img src="image/Logo_v3.svg" alt="logo" />   
+            </figure> <!-- End Figure for my Logo-->
+            
+            
+            <div class="nav_container"> <!-- This div seperates from the logo to the main Navigation -->
+                <a href="index.html">Home</a>
+                <a href="resume.pdf" onclick="window.open(this.href); return false;" onkeypress="window.open(this, href); return false">
+                        Resume</a>
+                <a href="about.html">About Me</a>
+                <a href="#contact">Contact Me</a>
+            </div> <!-- End div for nav_container -->
+        </div>
+    </nav> <!-- End nav for CPU-->
+
+    <!-- ****************************** Mobile Navigation *******************************************-->
+    <nav id="mobile_screen"> <!-- This is the Navigation Control for the PC-->
+
+        <div class="wrapper">
+            <!-- Clicking on the Logo will lead back to the homepage-->
+            <figure class="logo"> <!-- With this figure tag, it will allow me to control the size of the image -->
+                                  <!-- It will also allow me to control the position of the page.-->
+                <img src="image/Logo_v3.svg" alt="logo" />
+            </figure> <!-- End Figure for my Logo-->
+            
+            <!-- This button only exist on mobile only -->
+            <div id="hamberger_icon" onclick="nav_button()"></div>
+
+                <div class="nav_container">
+                    <a href="index.html">Home</a>
+                    <a href="resume.pdf" onclick="window.open(this.href); return false;" onkeypress="window.open(this, href); return false">
+                        Resume</a>
+                    <a href="about.html">About Me</a>
+                    <a href="#contact">Contact Me</a>
+                </div><!-- End div for nav container -->
+
+        </div> <!-- End div for Wrapper -->
+    </nav> <!-- End nav for mobile-->
+    
+    <!-- *********************** Background Image *************************** -->
+    <div id="image_ui"></div> <!-- Place Image Backgorund Here in CSS -->
+
+    <div class="content" style="padding-top: 0; padding-bottom: 0;">
+    <div class="interior_wrapper">
+        
+        <!-- *********************** Description *************************** -->
+        <article style="padding-bottom: 0;">
+            <h1>Struggle</h1>
+            <p><strong>Motion Graphic &bull; Animation</strong></p>
+
+            <p><strong>April 2018 - May 2018 &bull; October 18, 2019 - Current</strong></p>
+        </article>
+    </div> <!-- End div for interior wrapper -->
+    </div> <!-- End did for content -->
+        
+    <!-- ************************ Image Seperation ******************************  -->
+    <div class="seperation"></div>
+     
+    <div class="content">
+    <div class="interior_wrapper">
+        <h2 id="description" class="tabs">Description</h2>
+        <section>
+            <p>This is a story about the struggles the main character deals with during the times at school.
+                 It mostly involves pressure and depression.</p>
+        </section>
+
+        <!-- *********************** Animation *************************** -->
+        <h2 id="animation" class="tabs">Animation</h2>
+        <article>
+            <p>The Song "Meteor" belongs to "John"</p>
+            <p><strong>Source:</strong> <a href="https://www.youtube.com/watch?v=vt2wHUJHbbg" 
+                onclick="window.open(this.href); return false;" onkeypress="window.open(this, href)">
+                https://www.youtube.com/watch?v=vt2wHUJHbbg</a></p>
+        </article>
+
+        <figure>
+            <video controls src="image/animation/struggle/final_animation.mp4">
+            This video does not support your current version</video>
+            <figcaption>This is the animated version</figcaption>
+        </figure>
+
+        <!-- *********************** Storyboard *************************** -->
+
+        <h2 id="storyboard" class="tabs">Storyboard</h2>
+
+        <figure style="padding-top: 16px;">
+            <img src="image/animation/struggle/storyboard/1.png" alt="Storyboard">
+            <img src="image/animation/struggle/storyboard/2.png" alt="Storyboard">
+            <img src="image/animation/struggle/storyboard/3.png" alt="Storyboard">
+            <img src="image/animation/struggle/storyboard/4.png" alt="Storyboard">
+            <img src="image/animation/struggle/storyboard/5.png" alt="Storyboard">
+            <img src="image/animation/struggle/storyboard/6.png" alt="Storyboard">
+            <img src="image/animation/struggle/storyboard/7.png" alt="Storyboard">
+            <img src="image/animation/struggle/storyboard/8.png" alt="Storyboard">
+            <img src="image/animation/struggle/storyboard/9.png" alt="Storyboard">
+            <img src="image/animation/struggle/storyboard/10.png" alt="Storyboard">
+            <img src="image/animation/struggle/storyboard/11.png" alt="Storyboard">
+            <img src="image/animation/struggle/storyboard/12.png" alt="Storyboard">
+            <img src="image/animation/struggle/storyboard/13.png" alt="Storyboard">
+        </figure>
+
+        <!-- *********************** Characters *************************** -->
+
+        <h3 id="characters" class="tabs">Characters</h3>
+
+        <!-- *********************** Main Character *************************** -->
+        <section>
+            <h3 class="space">Main Character</h3>
+            <p>Gender is androgynous. It is basically an empty husk.
+            </p>
+        </section>
+        
+        <figure>
+            <img src="image/animation/struggle/main_character_blueprint.png" alt="Main Character">
+        </figure>
+
+        <!-- *********************** Fear *************************** -->
+        <section>
+            <h3 class="space">FEAR</h3>
+            <p>They represents fear and anxiety which prevents them from ask for help or even talking to people to make friends. 
+                This messes with the main character's vision and mental state.</p>
+        </section>
+
+        <figure>
+            <img src="image/animation/struggle/characters.png" alt="Assets">
+        </figure>
+
+        <!-- *********************** Main Character SKetch *************************** -->
+        <section>
+            <h3 class="space">Manager</h3>
+
+            <p>This person represents drudgery. Working long hours and 
+                not getting homework done. Which makes the main character feel more depressed.</p>
+
+            <p>It also represent the main character's prison.</p>
+        </section>
+
+        <figure>
+            <img src="image/animation/struggle/fast_food_assets/fast_food.png" alt="Assets">
+        </figure>
+
+        <!-- *********************** Background *************************** -->
+        <h2 id="background" class="tabs">Background</h2>
+
+        <!-- *********************** Office *************************** -->
+        <section>
+            <h3 class="space">Dreaded Office</h3>
+            <p>This is the final rendering of the dreaded office.</p>
+        </section>
+        <figure>
+            <img src="image/animation/struggle/office.png" alt="Logo">
+        </figure>
+
+        <!-- *********************** Final Scene *************************** -->
+        <section>
+            <h3 class="space">Darkness</h3>
+            <p>This is the final scene of the whole thing. This represents loneliness and low-self esteem.
+                Yet, through all of that, there is still hope.
+            </p>
+
+            <p>Inside this character, you can see harsh things to say about the main character.</p>
+
+        </section>
+
+        <figure>
+            <img src="image/animation/struggle/final_scene.png" alt="Logo">
+        </figure>
+    </div>
+
+<!-- All of footer icons do not belong to me. These icon belongs to "fontawesome.com"-->
+<footer>
+    <div class="footer_wrapper">
+        <div id="contact">
+            <h2>Contact Me:</h2>
+            <ul>
+                <li>Phone: 207-766-6625</li>
+                <li>Email: MiyukProduction@gmail</li>
+            </ul> 
+            <div class="icon">
+                <a href="https://www.facebook.com/david.zhao.73" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img id="facebook" src="fontawesome_logo/facebook-square-brands.svg" alt="facebook" /></a>
+                
+                <a href="https://www.linkedin.com/in/david-zhao-designer/" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/linkedin-brands.svg" alt="linkedin"/></a>
+            </div> <!-- End div for Icon-->
+        </div>
+
+        <div class="gallery">
+            <h2>Gallery</h2>
+    
+            <div class="social_gallery">
+                <a href="https://www.youtube.com/channel/UCTFvc0N-rI3c49-UnhYSPww?" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/youtube-brands.svg" alt="youtube"/></a>
+
+                <a href="https://www.instagram.com/danxgallery/?hl=en" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/instagram-brands.svg" alt="instagram"/></a>
+            
+                <a href="https://www.behance.net/danxgallery" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/behance-brands.svg"  alt="behance"/></a>
+                <!-- These image icons are made by Font Awesome --> 
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+
+
+</body>
+</html>

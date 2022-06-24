@@ -1,0 +1,788 @@
+/*This is my stylesheet*/
+
+
+/*This code effects all of my codes.
+    This set my margins and padding to 0.
+    The Dominant Font Family is Overpass in the google fonts*/
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Overpass', 'arial', sans-serif;
+}
+
+/*******************************************************************
+                        Gobal CSS
+********************************************************************/
+/*This section will affect all of my pages*/
+
+/* ------- This CSS effects the body ----------- */
+
+/* - Set the width in 100% (or infinity)
+   - Set the font to 12pt */
+body {
+    width: 100%;
+    font-size: 12pt;
+}
+
+/* Set the max width to 1200px*/
+/* Set everything to center*/
+.wrapper {
+    max-width: 1200px; /* Max width helps reduce size when changing screen size. */
+    margin: 0 auto;
+}
+
+/*Always a fill size video regardless of width of the section with adjustment */
+video{
+    width: 100%;
+    padding: 10px 0; /* Giving some room in between the borders */
+}
+
+/*Always a fill the image size regardless of width of the section with adjustment */
+figure img{
+    width: 100%;
+}
+
+/* This CSS only effects li tags */
+li {
+    list-style-type: none; /* Remove all the list style type to none. */
+    padding-bottom: 16px; /* Seperate the list by 16px at the bottom*/
+
+    line-height: 24px; /* Seperate the line height on a single li tag by 24px */
+}
+
+/* This CSS only effects p tags */
+p {
+    padding-bottom: 16px; /*all p tags will have a bottom padding of 16px*/
+    line-height: 34px; /* give the space of each gap by 24px */
+}
+
+/*all non-specific a tags will have a highlight color of blue and make the text bold*/
+p a:hover{
+    color: #3c60af; /*light Blue*/
+    font-weight: bold;
+}
+
+/* This effects all of the a tags that are links or already pressed before */
+a:link, a:visited{
+    text-decoration: none; /*Remove underline*/
+    color: #000000; /* Pure Black*/
+}
+
+
+/*******************************************************************
+                            Navigation
+********************************************************************/
+
+/* ------------------------- CPU Screen Navigation ------------------------ */
+/* This only apply to the Navigation for CPU */
+#cpu_screen {
+    width: 100%; /* This code is nessessary because every content in the navigation will fit the max-width of 1200px*/
+    height: 70px;
+
+    z-index: 3; /* Change position of the layer */
+
+    background-color: #ffffff; /* White */
+    transition: .3s ease-out; /*This effects my animation scrolling*/
+}
+
+/* This class holds all the navigation a tags. Not the logo. */
+.nav_container {
+    float: right; /* Move all the text to the right side */
+
+    font-size: 18px; 
+
+    padding-top: 25px; /* Giving space for the top navigation. */
+    padding-right: 20px;
+}
+
+/* This class controls the position of a tags in the navigation */
+.nav_container a{
+    padding: 24px 25px; /* give space on all sides of the a tags */
+}
+
+/* This class does the animation fade color animaiton when hovering the a tags on the Navigation */
+.nav_container a:hover{
+    animation: subHover .2s linear both; /* Name of keyframe, number of seconds, style of animation, direction */
+}
+
+/*------------------ Navigation Animation --------------------*/
+
+/* This is the animation for the Sub Navigation in some of my works */
+   @keyframes subHover{
+    /* Start with black text and white background */
+    from {
+        background-color: #ffffff; /*White*/
+          color: #000000; /*Black*/
+        }
+
+    /* End with white text and light blue background */
+    to {
+        background-color: #80a3d8; /*Light Blue*/
+        color: #ffffff /*White*/
+        }
+}
+
+/*------------------- Logo -----------------------------*/
+/* This class only effects on the logo in the Navigation*/
+   .logo img{
+    float: left; /* Float to the left side */
+
+    width: 70px; /* Size of width 70px and height of 50px */
+    height: 50px; 
+
+    padding-top: 10px; /* adds space for the top and left side of the logo */
+    padding-left: 10px;
+}
+
+/*----------------- Mobile Navigation ------------------ */
+
+/* This id only effects the mobile version of the navigation */
+#mobile_screen{
+    display: none; /* The mobile version of navigation will not show up on CPU Screen*/
+}
+
+/*******************************************************************
+                            HomePage
+********************************************************************/
+
+/* This id holds all the content */
+#index_wrapper{
+    margin: 0 auto; /* This code will center the whole content*/
+    width: 100%;
+}
+
+/*******************************************************************
+                        Homepage Works
+********************************************************************/
+
+/* This div is the wrapper of the whole thing.*/
+#project {
+    max-width: 1200px;
+    font-size: 24px;
+    clear: both;
+
+    color: #000000;
+} 
+  
+/* This is used for seeing title and type of work.*/
+.grid-container .text {
+    font-size: 20px;
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    text-align: center;
+    color: #ffffff; /* Font color to white */
+    margin-top: 16px;
+
+    opacity: 0;
+    background-color: rgba(14, 76, 97, 0.89); /* Light Blue with opacity of 89%. */
+    transition: .2s ease;
+}
+
+.text h3{
+    position: absolute;
+    top: 90px;
+    left: 60px;
+}
+
+.text p{
+    position: absolute;
+    top: 120px;
+    left: 60px;
+}
+
+.text_mobile{
+    display: none;
+}
+
+/* This is the main base of the grid layout*/
+.grid-container{
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-gap: 30px;
+
+    margin-left: 50px;
+}
+
+/*This code controls the indivdual grid item images. */
+.grid-container .grid-item img{
+    width: 250px;  /* Set the width and height by 250px*/
+    height: 250px;
+
+    outline: 10px solid #3b4653; /*Saturated Dark Blue*/
+
+    margin: 16px 0;
+
+    
+    z-index: 1; /* Move the whole layer by one layer over. */
+    transition: all .2s ease-in-out;
+}
+
+/* Add animation of hovering a link */
+.grid-item:hover .text{
+    opacity: 1;
+}
+
+.grid-item a:link, .grid-item a:visited{
+    color: #ffffff;
+}
+
+/* Remove borders from image with this specific class.*/
+.noborders{
+    border: none;
+}
+
+/*******************************************************************
+                        Footer
+********************************************************************/
+
+/* This content is footer only */
+footer{
+    width: 100%; /* Not effected by wrapped div and covers all of the content */
+    height: 300px;
+    clear: both; /* This applies only on floats */
+
+    background-color: #4c6fe2; /* Saturated Blue */
+    color: #ffffff; /* White */
+}
+
+/* - this class only affects the interior of the footer
+   - set the max width to 1000px
+   - center the whole interior footer (footer wrapper) with margin */
+.footer_wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* - This only effects the contact info.
+   - Gives more space from the top by 32px away from border */
+#contact{
+    padding-top: 32px;
+}
+
+/* - This only effects the footer gallery (not the main gallery)
+   - Seperate from the contact by 16px with margin top. */
+.gallery{
+    margin-top: 16px;
+}
+
+/* - All Font Awesome Logo will have 30px in width and height regardless of the size of the screen*/
+.gallery .social_gallery a img, .icon a img{
+    width: 30px;
+    height: 30px;
+}
+
+/* - All Font Awesome Icon with the div of "class="social_gallery" will have to seperation of the
+     text by 5px; */ 
+.social_gallery {
+    margin-top: 5px;
+}
+
+/* - Give the Font Awesome Icon with the div of "class="social_gallery" in between space of 20px*/
+.social_gallery a, .icon a{
+    padding-right: 20px;
+}
+
+/*******************************************************************
+                            About
+********************************************************************/
+
+/* Seperate the section off the border */
+#index_wrapper article{
+    width: 600px;
+    float: right;
+    
+    margin-top: 150px;
+    margin-right: 150px;
+}
+
+/* This id effects the image in the About Section */
+#image{
+    float: left;
+    width: 400px;
+
+    padding-left: 100px;
+}
+
+
+/*******************************************************************
+                        Projects Interior
+********************************************************************/
+
+/* ----------- General Section ------------ */
+
+/* Main wrapper for all section */
+.interior_wrapper{
+    max-width: 800px;
+    margin: 0 auto; 
+}
+
+/* All text for all caption is centered*/
+.interior_wrapper figcaption{
+    text-align: center;
+}
+
+/* Seperate other figure div by 32px at the botttom */
+.interior_wrapper figure {
+    padding-bottom: 32px;
+}
+
+/* This class is an empty div that allow the background image to show in image */
+/* .seperation {
+    width: 100%;
+    padding-bottom: 75%;
+} */
+
+/* The div is the wrapper for the interior wrapper just for the background color */
+.content{
+    background-color: #ffffff; /* White */
+    padding-top: 20px;
+}
+
+/* Adds space between all sections and article */
+section, article{
+    padding: 20px 0;
+}
+
+/* This only exist if section has more than 1 thing */
+section ul li{
+    list-style-type: circle; /* This only list style type that change is the one that is in a section tag */
+}
+
+/* This is the background of the layer */
+#image_ui{
+    position: fixed; /* Position is fixed */
+    z-index: -1; /* This image is alway one layer lower than base */
+
+    width: 100%;
+    height: 100%;
+
+    
+    background-repeat: no-repeat;
+
+    margin: 0 auto;
+}
+
+/* Bring the user back to the top of the whole page. */
+#back-to-top{
+    width: 50px; /* size of 50px width and height */
+    height: 50px;
+
+    left: 94%; /* Located at the bottom right of the screen */
+    top: 90%;
+    
+    position: fixed; /* Position does not move at all. */
+}
+
+
+/* This only applies on h3 with this class
+   - Give botttom space by 16px. */
+.space{
+    padding-bottom: 16px;
+}
+
+/* This class creates different topics / sections */
+.tabs{
+    padding: 16px 0; /* extend the background color with padding by 16px for the top and bottom */
+    text-indent: 16px; /* indent the text by 16px */
+    background-color: #5f6272; /* Grayish Blue */
+    color: #ffffff; /* White */
+}
+
+table{
+    text-align: left;
+}
+
+td{
+    padding-left: 30px;
+}
+
+th, td{
+    padding-bottom: 20px;
+}
+
+/* ----------- Grid Section ------------ */
+
+/* create a three layer grid */
+.grid-structure{
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr; /* Three layer grid */
+
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+/* takes up three spaces */
+.grid-span{
+    grid-column: span 3;
+}
+
+/******************************************************
+                    Side Navigation
+*****************************************************/
+
+/*Move the things to the left side. This will stay hidden until this navigation is hoverd.
+  It's basically the wrapper of this whole navigation. */
+#side_sub{
+    left: -280px;  
+    
+    z-index: 2;
+    position: fixed;
+    float: right;
+    
+    height: 80%;
+    
+    transition: .3s ease-out; /*when hovered, it will have an ease out animation */
+    
+}
+
+/*All the list in the sub navigation will be implamented here.*/
+#side_sub .list{
+    border-top: #3c60af solid 5px;
+    width: 340px;
+    height: 100%;
+    margin-top: 100px;
+    font-size: 12pt;
+
+
+    text-indent: 30px; 
+}
+
+/* When hovered, the scroll bar will appear */
+#side_sub .list:hover{
+    overflow-y: scroll;
+    background-color: rgba(255,255,255,0.8);
+
+    transition: linear .2s;
+}
+
+/* all the a tag in this class will display vertically */
+.list a{
+    display: block;
+    padding: 12px 0;
+}
+
+/* This class is used to make icon at the left side of the section */
+.list a::before{
+    content: "";
+
+    /*This icon does not belong to me. 
+    This icon belongs to "fontawesome.com" */
+    background: url(fontawesome_logo/map-marker-alt-solid.svg) no-repeat;
+
+    display: inline-block;
+    padding-right: 10px;
+
+    width: 20px;
+    height: 20px;
+}
+
+#toggle_button0::before, .toggle_button a::before{
+    content: "";
+    background: url(image/side_bar_line.svg) no-repeat;
+
+    display: inline-block;
+    padding-right: 10px;
+
+    width: 20px;
+    height: 20px;
+}
+
+/*when hovering the a tag, this will hover with the background color from white to ligt blue on
+  the background color.
+
+  The font is from black to white
+
+  Check on @keyframe subHover on the sub navigation of this css page*/
+.list a:hover, .list h4:hover{
+    font-weight: bold;
+    animation: subHover .2s linear both;
+}
+
+/* When this navigation is hovered, the whole thing will appear with the animation of ease-out.*/
+#side_sub:hover{
+    left:0;
+    transition: .3s ease-out;
+}
+
+/* Text indent on the sub navigation is 30px */
+
+ .section a{
+    text-indent: 90px;
+}
+
+.toggle_button a{
+    text-indent: 60px;
+}
+
+/**************************************************************
+        Media Query - Responsive Design
+***************************************************************/
+
+/* -------------------------------------------------------------- */
+/* ---------------------- Ipad Pro ------------------------------*/
+/* -------------------------------------------------------------- */
+@media screen and (max-width: 1024px){
+
+    /******************************************************
+                    Navigation
+    *****************************************************/
+    #index_wrapper{
+        padding-top: 70px;
+    }
+
+    /* This navigation does not exist. */
+    #cpu_screen{
+        display: none;
+    }
+    
+     /* - Set the height from 50px to 400px because this is the hamberger menu
+     - Width will always be at 100%
+     - set bottom margin of 60px */
+     #mobile_screen{
+        height: 50px;
+        width: 100%;
+        display: block;
+         
+        position: fixed; /* Position of the Navigation does not move */
+        z-index: 3; /* Layer is higher by 3 */
+
+        background-color: #ffffff; /* White */
+    }
+
+    .text h3{
+        display: none;
+    }
+    
+    .text p{
+        display: none;
+    }
+
+    .text_mobile{
+        display: block;
+        text-align: center;
+        color: #000000; /* Black Font */
+    }
+
+    /* This is the dropdown menu when the hamberger menu icon is pressed */
+    .nav_container{
+        display: none; /* Start by not showing itself */
+
+        background-color: #ffffff; /* White */
+        width: 100%;
+    }
+    
+    .nav_container a{
+        width: 100%; 
+
+        text-align: center;
+        float: none;
+        display: block;
+        
+        border-bottom: 2px solid #3b4653; /* Greyish Blue */
+    }
+    .nav_container a:hover{
+        animation: subNav .2s linear both;
+    }
+
+    .grid-span{
+        grid-column: none;
+    }
+
+    .nav_container a:hover{
+        animation: subNav .2s linear both;
+    }
+
+    /* Change border size */
+    .wrapper{
+        max-width: 100%;
+    }
+
+    .logo img{
+        padding: 0;
+
+    }
+
+    
+    /* Purposly use for Javascript. */
+    /* Start as not showing til teh button is pressed */
+    #show_and_hide{
+        display: none;
+    }
+
+
+    /* This icon makes a dropdown menu like a Hamberger. */
+    #hamberger_icon{
+        width: 50px;
+        height: 50px;
+
+        float: right;
+
+        background-image: url(gallery_icon/hamberger_bar.svg);
+        background-color: #ffffff;
+        background-repeat: no-repeat;
+    }  
+    
+    /* ******************************************************************
+                            Hompage Project
+    ******************************************************************* */
+
+    .interior_wrapper{
+        max-width: 85%;
+        display: block;
+    }
+
+    /*******************************************************************
+                            Projects
+    ********************************************************************/
+    #projects .wrapper{
+        padding-bottom: 30px;
+
+        padding-top: 70px;
+        margin-left: 60px;
+    }
+
+    .grid-container{
+        grid-template-columns: 250px 250px 250px;
+    }
+ 
+
+    /*******************************************************************
+                            Interior Project
+    ********************************************************************/
+    .interior_wrapper:nth-of-type(1){
+        padding-top: 50px;
+    }
+
+    /* This class is an empty div that allow the background image to show in image */
+    /* .seperation {
+        padding-bottom: 110%;
+    } */
+
+    /*******************************************************************
+                            Footer
+    ********************************************************************/
+
+    /* This content is footer only */
+    .footer_wrapper{
+        max-width: 80%; /* Not effected by wrapped div and covers all of the content */
+    }
+}/* End Bracket for screen width for the Ipad Pro */
+
+
+/* This is the Responsive Design for Ipad */
+@media screen and (max-width: 768px){
+    .grid-container{
+        margin-left: 0;
+    }
+
+    #index_wrapper article{
+        text-align: left;
+        float: right;
+
+        margin-right: 0;
+        padding-top: 70px;
+    }
+
+/* *********************** Interior Project ********************* */
+    #back-to-top{
+        left: 90%;
+        top: 90%;
+    }
+
+    .grid-container{
+        grid-template-columns: 250px 250px; /* Change the column layout to one. */
+        margin-left: 60px;
+    }
+
+/* **************************** Grid Structure *********************************** */
+    /* This Class will change the order of the grid layout. */
+    .grid-structure{
+        grid-template-columns: 1fr 1fr; /* Change the column layout to one. */
+    }
+    
+    /* Change from 3 to 2 */
+    .grid-span{
+        grid-column: span 2;
+    }
+
+
+}
+
+/* **************************************************************************************
+------------------------ Iphone 6 or Lower ---------------------------
+************************************************************** */
+
+@media screen and (max-width: 415px){
+    
+/* *******************************************************************************
+                                    Projects
+********************************************************************************* */
+
+/* This is the main base of the grid layout*/
+.grid-container{
+    grid-template-columns: 250px;
+    grid-row-gap: 30px;
+    margin-left: 0;
+
+    margin: 0 auto;
+
+}
+
+#index_wrapper article{
+    text-align: center;
+    float: none;
+    margin: 0 auto;
+
+    padding-top: 70px;
+}
+
+/******************************************************
+                    Sub Navigation
+*****************************************************/
+        
+    /* The sub navigation is changed when the screen size is mobile. */
+    #side_sub{
+        left: -220px;
+        top: -50px;
+    
+        height: 80%;
+    
+        line-height: 24pt;
+        
+        transition: .3s ease-out;
+    }
+
+    #side_sub .list{
+        width: 250px;
+        clear: left;
+    }
+
+    #side_sub .list:hover{
+        left: 200px;
+    }
+
+    /* Change from 3 to none */
+    .grid-span{
+        grid-column: 0;
+    }
+
+
+
+    /* **************************** Grid Structure *********************************** */
+    /* This Class will change the order of the grid layout. */
+    .grid-structure{
+        grid-template-columns: 1fr; /* Change the column layout to one. */
+    }
+
+    /* Move the back to top button to these coordinates. */
+    #back-to-top{
+        left: 80%;
+        top: 85%;
+    }
+
+} /* End bracket for mobile phone screen */

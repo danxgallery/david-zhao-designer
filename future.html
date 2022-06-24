@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    <script src="js/customscript.js"></script>
+
+    <style>
+        /* Change the grid layer to two */
+        .grid-structure:nth-of-type(7), .grid-structure:nth-of-type(5), .grid-structure:nth-of-type(6){
+            grid-template-columns: 1fr 1fr;
+        }
+
+       /* size for mobile phones */
+        @media screen and (max-width: 415px){
+
+            .grid-structure:nth-of-type(7), .grid-structure:nth-of-type(5), .grid-structure:nth-of-type(6){
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        
+    </style>
+    
+    <title>DanX Portfolio - Future UI</title>
+</head>
+
+
+<body>
+    <div id="top">
+        <!-- This div is purposly Empty-->
+    </div> <!-- This div only applies with the div, back to top. -->
+    <div id="side_sub">
+            <div class="list"> 
+                <a href="#description">Description</a>
+                <a href="#sketches">Sketches</a>
+                <a href="#ui">UI Design</a>
+                <a href="#char">Character Design</a>
+            </div> <!-- End div for list -->
+    </div> <!-- End div for side_sub-->
+
+    <!-- This Icon does not belong to me. This Icon belongs to "fontawesome.com" -->
+    <a href="#top"><img src="fontawesome_logo/arrow-alt-circle-up-solid.svg" id="back-to-top" alt="back-to-top" ></a>
+    
+     <!-- **************************** Navigation *************************************  -->
+     <nav id="cpu_screen"> <!-- This is the Navigation Control for the PC-->
+
+        <div class="wrapper">
+            <!-- Clicking on the Logo will lead back to the homepage-->
+            <figure class="logo"> <!-- With this figure tag, it will allow me to control the size of the image -->
+                                  <!-- It will also allow me to control the position of the page.-->
+                <img src="image/Logo_v3.svg" alt="logo" />
+            </figure> <!-- End Figure for my Logo-->
+            
+            
+            <div class="nav_container"> <!-- This div seperates from the logo to the main Navigation -->
+                <a href="index.html">Home</a>
+                <a href="resume.pdf" onclick="window.open(this.href); return false;" onkeypress="window.open(this, href); return false">
+                        Resume</a>
+                <a href="about.html">About Me</a>
+                <a href="#contact">Contact Me</a>
+            </div> <!-- End div for nav_container -->
+        </div>
+    </nav> <!-- End nav for CPU-->
+
+    <!-- ****************************** Mobile Navigation *******************************************-->
+    <nav id="mobile_screen"> <!-- This is the Navigation Control for the PC-->
+
+        <div class="wrapper">
+            <!-- Clicking on the Logo will lead back to the homepage-->
+            <figure class="logo"> <!-- With this figure tag, it will allow me to control the size of the image -->
+                                  <!-- It will also allow me to control the position of the page.-->
+                <img src="image/Logo_v3.svg" alt="logo" />
+            </figure> <!-- End Figure for my Logo-->
+            
+            <!-- This button only exist on mobile only -->
+            <div id="hamberger_icon" onclick="nav_button()"></div>
+
+                <div class="nav_container">
+                    <a href="index.html">Home</a>
+                    <a href="resume.pdf" onclick="window.open(this.href); return false;" onkeypress="window.open(this, href); return false">
+                        Resume</a>
+                    <a href="about.html">About Me</a>
+                    <a href="#contact">Contact Me</a>
+                </div><!-- End div for nav container -->
+
+        </div> <!-- End div for Wrapper -->
+    </nav> <!-- End nav for mobile-->
+
+    <!-- **************************** Main *************************************  -->
+    <div id="image_ui"></div> <!-- Place Image Backgorund Here in CSS -->
+
+    <div class="content" style="padding-top: 0;">
+    <div class="interior_wrapper"> <!-- Wraps the whole content. -->
+
+        <article style="padding-bottom: 0;">
+            <h1>Future UI</h1>
+            <p><strong>UI Design &bull; Animation</strong></p>
+
+            <p><strong>November 2017 - December 2017</strong></p>
+        </article>
+
+    </div> <!-- End div for Interior Wrapper -->
+    </div> <!-- End div for content class -->
+
+    
+    <!-- ************************ Image Seperation ******************************  -->
+    <div class="seperation"></div>
+
+    <div class="content"> <!-- Wraps the whole content with white background. -->
+    <div class="interior_wrapper"> <!-- Wraps the whole content. -->
+    <!-- **************************** Description *************************************  -->
+    <h2 id="description" class="tabs">Description</h2>
+    
+    <article>
+        <p>This is just a basic future UI while playing around with Roto Brush. Style 
+            of art is more towards vector style. </br> 
+            All sound effects belong to Enterbrain, Rage Games, Capcom, and SEGA. </p>      
+    </article>
+                   
+    <!-- *********************** Video *************************** -->
+    <figure>
+        <video controls src="image/ui/futureui/animation/animation-30fps.mp4">
+        This video does not support your current version</video>
+        <figcaption>This is the animated version</figcaption>
+    </figure>
+
+    <!-- *********************** Sketches *************************** -->
+    <h2 id="sketches" class="tabs">Sketches</h2>
+    <article>
+        <p>These sketches exploring ideas about assets, and how the UI would work and look.
+        </p>
+    </article>
+                
+    <div class="grid-structure">
+        <figure>
+            <img src="image/ui/futureui/sketch/interface.png" alt="sketch 1">
+            <figcaption>Interactive Plan</figcaption>
+        </figure>
+
+        <figure>
+            <img src="image/ui/futureui/sketch/interface_sketch_pre.png" alt="sketch 1">
+            <figcaption>Interface Sketch</figcaption>
+        </figure>
+
+        <figure>
+            <img src="image/ui/futureui/sketch/assetsketch.png" alt="sketch 1">
+            <figcaption>Assets Sketch</figcaption>
+        </figure>
+
+        <figure>
+            <img src="image/ui/futureui/sketch/achivement_page.png" alt="achivement sketch">
+            <figcaption>Achievement Sketch</figcaption>
+        </figure>
+
+        <figure>
+            <img src="image/ui/futureui/sketch/profilesketch.png" alt="profile sketch">
+            <figcaption>Profile Sketch</figcaption>
+        </figure>
+    </div>
+
+
+    <!-- *********************** Wireframes *************************** -->
+    <h2 id="ui" class="tabs">UI Design</h2>
+    <!-- *********************** Achivement Page *************************** -->
+
+    <section>
+        <h2 class="space">Achievement Page</h2>
+        
+        <p>The Achievement Page tracks rewards. </p>
+    </section>
+
+    <div class="grid-structure">
+        <figure>
+            <img src="image/ui/futureui/assets/achivement_v1.png"  alt="achivement 1">
+            <figcaption>Version 1</figcaption>
+        </figure>
+
+        <figure>
+            <img src="image/ui/futureui/assets/achivement_v2.png"  alt="achivement 2">
+            <figcaption>Version 2</figcaption>
+        </figure>
+
+        <figure>
+            <img src="image/ui/futureui/assets/achivement_final.png"  alt="achivement final">
+            <figcaption>Version 3</figcaption>
+        </figure>
+    </div>
+
+
+    <!-- *********************** Profile Page *************************** -->
+    <section>
+        <h2>Profile Page</h2>
+        <p>Profile Page tells the background of a character name Rebecca Amaterasu.</p>
+    </section>
+
+    <div class="grid-structure">
+        <figure>
+            <img src="image/ui/futureui/assets/profile_v1.png"  alt="sketch 1">
+            <figcaption>Version 1</figcaption>
+        </figure>
+
+        <figure>
+            <img src="image/ui/futureui/assets/profile_v2.png"  alt="sketch 1">
+            <figcaption>Version 2</figcaption>
+        </figure>
+
+        <figure>
+            <video loop autoplay src="image/ui/futureui/profile_comp.mp4">
+                This video does not support your version.</video>
+            <figcaption>Version 3 with Animation</figcaption>
+        </figure>
+    </div>
+
+
+    <!-- *********************** Medal *************************** -->
+    <section>
+        <h2>Medal Page</h2>
+        <p>The Medal Page is just like Achievement Page. Only with Medals.</p>
+    </section>
+    <div class="grid-structure">
+        <figure>
+            <img src="image/ui/futureui/assets/medal_v1.png" alt="profile"> 
+            <figcaption>Version 1</figcaption>
+        </figure>
+
+        <figure>
+            <img src="image/ui/futureui/assets/medal_v2.png" alt="profile"> 
+            <figcaption>Version 2</figcaption>
+        </figure>
+
+        <figure>
+            <video loop autoplay src="image/ui/futureui/medal.mp4">This video does not
+            support your version.</video>
+            <figcaption>Version 3 with Animation</figcaption>
+        </figure>
+    </div>                   
+    
+    <!-- *********************** Character Design *************************** -->
+    <h2 id="char" class="tabs">Character Design</h2>
+    
+    <!-- *********************** Rebecca Final Version*************************** -->
+    <section>
+        <h3 class="space">Rebecca Amaterasu</h3>
+        <p>This style was geared toward the Puyo Puyo style. Flat and cartoony.</p>
+    </section>
+    
+    <div class="grid-structure">
+        <figure>
+            <img src="image/ui/futureui/sketch/amaterasu_v1.svg" alt="final version">
+            <figcaption>Version 1</figcaption>
+        </figure>
+        
+        <figure>
+            <img src="image/ui/futureui/sketch/amaterasu_v2.svg" alt="final version">
+            <figcaption>Version 2</figcaption>
+        </figure>
+    </div>
+    
+    <!-- *********************** Sketch *************************** -->
+    <section>
+        <h3 class="space">Sketches</h3>
+        <p>The main inspiration for her is like a mix of a typical school girl in college in
+            America and Japan, and an artist wearing a beret.</p>
+    </section>
+
+    <div class="grid-structure">
+
+        <figure>
+            <img src="image/ui/futureui/sketch/rebecca_amaterasu_v1.png" alt="digital sketch">
+            <figcaption>Version 2</figcaption>
+        </figure>
+
+        <figure>
+            <img src="image/ui/futureui/sketch/rebecca_sketch_v3.png" alt="final sketch">
+            <figcaption>Version 3</figcaption>
+        </figure>
+    </div>
+
+
+            
+        </div> <!-- End div for interior Wrapper-->
+    </div> <!-- End div for content class -->
+
+<!-- ************************************* Footer ******************************** -->
+
+<!-- All of footer icons do not belong to me. These icon belongs to "fontawesome.com"-->
+<footer>
+    <div class="footer_wrapper">
+        <div id="contact">
+            <h2>Contact Me:</h2>
+            <ul>
+                <li>Phone: 207-766-6625</li>
+                <li>Email: MiyukProduction@gmail</li>
+            </ul> 
+            <div class="icon">
+                <a href="https://www.facebook.com/david.zhao.73" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img id="facebook" src="fontawesome_logo/facebook-square-brands.svg" alt="facebook" /></a>
+
+                <a href="https://www.linkedin.com/in/david-zhao-designer/" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/linkedin-brands.svg" alt="linkedin"/></a>
+            </div> <!-- End div for Icon-->
+        </div>
+ 
+        <div class="gallery">
+            <h2>Gallery</h2>
+    
+            <div class="social_gallery">
+                <a href="https://www.youtube.com/channel/UCTFvc0N-rI3c49-UnhYSPww?" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/youtube-brands.svg" alt="youtube"/></a>
+
+                <a href="https://www.instagram.com/danxgallery/?hl=en" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/instagram-brands.svg" alt="instagram"/></a>
+            
+                <a href="https://www.behance.net/danxgallery" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/behance-brands.svg"  alt="behance"/></a>
+            
+                <a href="https://www.deviantart.com/danxgallery" onclick="window.open(this.href); return false;"
+                onkeypress="window.open(this, href); return false"><img src="fontawesome_logo/deviantart-brands.svg"  alt="deviantart"/></a>
+                <!-- These image icons are made by Font Awesome --> 
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+AuthName "David Zhao"
+AuthUserFile https://danxgallery.github.io/custom404.html
+AuthType Basic
+require valid-user
+ErrorDocument 404 custom404.html
+AddHandler server-parsed html
